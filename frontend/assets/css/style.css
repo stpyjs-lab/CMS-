@@ -1,0 +1,107 @@
+/* Only for minor global tweaks */
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* Color palette (custom brand colors) */
+:root {
+  --brand-1: #71CB90; /* primary green */
+  --brand-2: #B5E8A4; /* primary green (light) */
+  --brand-3: #FFC8C4; /* soft pink */
+  --brand-4: #FFB0C4; /* soft pink (mid) */
+  --brand-5: #FF97C4; /* accent / danger */
+}
+
+/* Utility classes using brand colors */
+.text-brand-1 { color: var(--brand-1) !important; }
+.bg-brand-1 { background: var(--brand-1) !important; color: #fff !important; }
+.hover\:bg-brand-2:hover { background: var(--brand-2) !important; }
+
+.btn-primary { background: var(--brand-1); color: #fff; }
+.btn-primary:hover { background: var(--brand-2); }
+
+.btn-danger { background: var(--brand-5); color: #fff; }
+.btn-danger:hover { background: var(--brand-4); }
+
+.nav-link { color: var(--brand-1); }
+.nav-link:hover { color: var(--brand-2); text-decoration: underline; }
+
+/* Optional: animate alert fade */
+#alertContainer > div {
+  transition: all 0.3s ease;
+}
+
+/* ------------------------------------------------------------------
+   Site-wide background image + overlay
+   Place the desired background image at: frontend/assets/images/clinic-bg.jpg
+   It will be served as: /assets/images/clinic-bg.jpg
+   ------------------------------------------------------------------ */
+
+body {
+  /* solid brand background */
+  background-color: var(--brand-4); /* #FFB0C4 */
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* Use this file path for the actual image (user should add it to the repo): */
+body.bg-image {
+  background-image: url('/assets/images/clinic-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Soft white overlay + slight blur to improve readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(4px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ensure app content appears above the overlay */
+#app, .max-w-6xl, .max-w-5xl {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero tweaks */
+.hero h1 {
+  color: var(--brand-1);
+}
+.hero p { color: rgba(0,0,0,0.75); }
+
+/* Header & footer use brand purple */
+header, footer {
+  background: #B19CD9;
+  backdrop-filter: blur(2px);
+}
+
+/* Header text & icons: white for contrast */
+header {
+  color: #fff;
+}
+
+/* Ensure header links and icons are readable */
+header a,
+header .nav-link,
+header i,
+header svg,
+header svg * {
+  color: #fff !important;
+  fill: #fff !important;
+  stroke: #fff !important;
+}
+
+/* Footer keeps white text for readability */
+footer {
+  color: #fff;
+}
