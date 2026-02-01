@@ -10,8 +10,8 @@ export function fillForm(doctor) {
   $("name").value = doctor.name || "";
   $("specialty").value = doctor.specialty || "";
   $("phone").value = doctor.phone || "";
-  $("email").value = doctor.email || "";
+  $("schedule").value = doctor.schedule || "";
 
   $("submitBtn").textContent = "Update Doctor";
   $("cancelBtn").style.display = "inline-block";
-}
+} 

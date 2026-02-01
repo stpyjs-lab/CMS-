@@ -12,7 +12,12 @@
       <input type="text" id="name" placeholder="Full name" required class="w-full border rounded px-3 py-2">
       <input type="text" id="specialty" placeholder="Specialty" class="w-full border rounded px-3 py-2">
       <input type="text" id="phone" placeholder="Phone" class="w-full border rounded px-3 py-2">
-      <input type="email" id="email" placeholder="Email" class="w-full border rounded px-3 py-2">
+      <select id="schedule" class="w-full border rounded px-3 py-2">
+        <option value="">Select schedule</option>
+        <option value="MON-WED">MON-WED</option>
+        <option value="WED-SAT">WED-SAT</option>
+        <option value="MON-SAT">MON-SAT</option>
+      </select>
 
       <div class="flex space-x-2">
         <button type="submit" id="submitBtn" class="flex-1 bg-brand-1 hover:bg-brand-2 text-white py-2 rounded">Add Doctor</button>
@@ -38,6 +43,7 @@
             <th class="px-3 py-2">ID</th>
             <th class="px-3 py-2">Name</th>
             <th class="px-3 py-2">Specialty</th>
+            <th class="px-3 py-2">Schedule</th>
             <th class="px-3 py-2">Phone</th>
             <th class="px-3 py-2">Actions</th>
           </tr>

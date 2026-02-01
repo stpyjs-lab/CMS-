@@ -22,16 +22,31 @@ export function renderDoctorTable(doctors) {
       <td class="px-3 py-2">${d.id}</td>
       <td class="px-3 py-2 font-medium text-gray-900">${d.name}</td>
       <td class="px-3 py-2">${d.specialty || ""}</td>
+      <td class="px-3 py-2">${d.schedule || "-"}</td>
       <td class="px-3 py-2">${d.phone || ""}</td>
       <td class="px-3 py-2 flex space-x-2">
-        <button class="bg-yellow-400 hover:bg-yellow-500 text-black py-1 px-3 rounded" data-edit="${d.id}">Edit</button>
-        <button class="btn-danger text-white py-1 px-3 rounded" data-delete="${d.id}">Delete</button>
+        <button type="button" class="bg-yellow-400 hover:bg-yellow-500 text-black py-1 px-3 rounded" data-edit="${d.id}">Edit</button>
+        <button type="button" class="btn-danger text-white py-1 px-3 rounded" data-delete="${d.id}">Delete</button>
       </td>
     `;
 
-    row.querySelector("[data-edit]").onclick = () => editDoctor(d.id);
-    row.querySelector("[data-delete]").onclick = () => deleteDoctorAction(d.id);
-
     body.appendChild(row);
   });
+
+  // delegated handlers
+  body.onclick = (e) => {
+    const editBtn = e.target.closest("[data-edit]");
+    if (editBtn) {
+      const id = Number(editBtn.getAttribute("data-edit"));
+      if (!Number.isNaN(id)) editDoctor(id);
+      return;
+    }
+
+    const delBtn = e.target.closest("[data-delete]");
+    if (delBtn) {
+      const id = Number(delBtn.getAttribute("data-delete"));
+      if (!Number.isNaN(id)) deleteDoctorAction(id);
+      return;
+    }
+  };
 }

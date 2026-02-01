@@ -14,8 +14,8 @@ export function initDoctorController() {
     const data = {
       name: $("name").value.trim(),
       specialty: $("specialty").value.trim(),
+      schedule: $("schedule").value || null,
       phone: $("phone").value.trim(),
-      email: $("email").value.trim(),
     };
 
     const { editingId } = getState();

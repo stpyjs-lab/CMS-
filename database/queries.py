@@ -121,8 +121,8 @@ def doctors_create(data: dict):
     conn = get_connection()
     now = datetime.now().isoformat()
     cur = conn.execute(
-        "INSERT INTO doctors (name, specialty, phone, email, created_at) VALUES (?, ?, ?, ?, ?)",
-        (data.get("name"), data.get("specialty"), data.get("phone"), data.get("email"), now),
+        "INSERT INTO doctors (name, specialty, phone, schedule, created_at) VALUES (?, ?, ?, ?, ?)",
+        (data.get("name"), data.get("specialty"), data.get("phone"), data.get("schedule"), now),
     )
     conn.commit()
     new_id = cur.lastrowid
@@ -136,10 +136,10 @@ def doctors_update(doctor_id: int, data: dict):
     conn.execute(
         """
         UPDATE doctors
-        SET name=?, specialty=?, phone=?, email=?, updated_at=?
+        SET name=?, specialty=?, phone=?, schedule=?, updated_at=?
         WHERE id=?
         """,
-        (data.get("name"), data.get("specialty"), data.get("phone"), data.get("email"), now, doctor_id),
+        (data.get("name"), data.get("specialty"), data.get("phone"), data.get("schedule"), now, doctor_id),
     )
     conn.commit()
     conn.close()
