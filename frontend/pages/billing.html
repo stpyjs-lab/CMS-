@@ -1,0 +1,55 @@
+<div class="max-w-3xl mx-auto p-6">
+
+  <div class="flex items-center justify-between mb-6">
+    <h1 class="text-3xl font-bold">Billing</h1>
+    <a href="/home" data-link class="text-sm text-blue-600 underline">← Back to Home</a>
+  </div>
+
+  <!-- Create Invoice Form -->
+  <div class="bg-white p-5 rounded shadow mb-8">
+    <h2 class="font-semibold mb-3 text-lg">Create Invoice</h2>
+    <form id="billingForm" class="space-y-3">
+      <select id="patient_id" required class="w-full border rounded px-3 py-2"></select>
+      <select id="doctor_id" required class="w-full border rounded px-3 py-2"></select>
+      <input type="number" step="0.01" id="amount" placeholder="Amount" required class="w-full border rounded px-3 py-2">
+      <input type="date" id="issued_on" class="w-full border rounded px-3 py-2">
+      <input type="text" id="description" placeholder="Description (optional)" class="w-full border rounded px-3 py-2">
+
+      <div class="flex space-x-2">
+        <button type="submit" id="submitBtn" class="flex-1 bg-brand-1 hover:bg-brand-2 text-white py-2 rounded">Create Invoice</button>
+        <button type="button" id="cancelBtn" class="flex-1 bg-gray-400 hover:bg-gray-500 text-white py-2 rounded hidden">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Invoices Table -->
+  <div class="bg-white p-5 rounded shadow">
+    <h2 class="font-semibold mb-4 text-lg">All Invoices</h2>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="text-center py-4">
+      <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-500 mx-auto"></div>
+    </div>
+
+    <!-- Table Container -->
+    <div id="billingTableContainer" class="hidden overflow-x-auto">
+      <table class="min-w-full text-left border">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="px-3 py-2">ID</th>
+            <th class="px-3 py-2">Patient</th>
+            <th class="px-3 py-2">Doctor</th>
+            <th class="px-3 py-2">Date</th>
+            <th class="px-3 py-2">Price</th>
+            <th class="px-3 py-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="billingTableBody"></tbody>
+      </table>
+
+      <p id="noBilling" class="text-center text-gray-500 mt-3 hidden">No invoices found.</p>
+    </div>
+  </div>
+
+  <div id="alertContainer" class="fixed top-4 right-4 space-y-2 z-50"></div>
+</div>

@@ -1,0 +1,59 @@
+<div class="max-w-3xl mx-auto p-6">
+
+  <div class="flex items-center justify-between mb-6">
+    <h1 class="text-3xl font-bold">Clinic — Patients</h1>
+    <a href="/home" data-link class="text-sm text-blue-600 underline">← Back to Home</a>
+  </div>
+
+  <!-- Add / Edit Patient Form -->
+  <div class="bg-white p-5 rounded shadow mb-8">
+    <h2 class="font-semibold mb-3 text-lg">Add New Patient</h2>
+    <form id="patientForm" class="space-y-3">
+      <div class="grid grid-cols-2 gap-3">
+        <input type="text" id="first_name" placeholder="First name" required class="w-full border rounded px-3 py-2">
+        <input type="text" id="last_name" placeholder="Last name" required class="w-full border rounded px-3 py-2">
+      </div>
+
+      <input type="date" id="dob" placeholder="Date of birth" class="w-full border rounded px-3 py-2">
+      <input type="text" id="phone" placeholder="Phone" class="w-full border rounded px-3 py-2">
+      <input type="email" id="email" placeholder="Email" class="w-full border rounded px-3 py-2">
+      <input type="text" id="address" placeholder="Address" class="w-full border rounded px-3 py-2">
+
+      <div class="flex space-x-2">
+        <button type="submit" id="submitBtn" class="flex-1 bg-brand-1 hover:bg-brand-2 text-white py-2 rounded">Add Patient</button>
+        <button type="button" id="cancelBtn" class="flex-1 bg-gray-400 hover:bg-gray-500 text-white py-2 rounded hidden">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Patients Table -->
+  <div class="bg-white p-5 rounded shadow">
+    <h2 class="font-semibold mb-4 text-lg">All Patients</h2>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="text-center py-4">
+      <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-500 mx-auto"></div>
+    </div>
+
+    <!-- Patients Table Container -->
+    <div id="patientsTableContainer" class="hidden overflow-x-auto">
+      <table class="min-w-full text-left border">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="px-3 py-2">ID</th>
+            <th class="px-3 py-2">Name</th>
+            <th class="px-3 py-2">Phone</th>
+            <th class="px-3 py-2">Email</th>
+            <th class="px-3 py-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="patientsTableBody"></tbody>
+      </table>
+
+      <p id="noPatients" class="text-center text-gray-500 mt-3 hidden">No patients found. Add one using the form above.</p>
+    </div>
+  </div>
+
+  <!-- Alert container -->
+  <div id="alertContainer" class="fixed top-4 right-4 space-y-2 z-50"></div>
+</div>

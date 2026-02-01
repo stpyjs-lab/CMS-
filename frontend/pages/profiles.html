@@ -1,0 +1,99 @@
+<div class="max-w-5xl mx-auto p-6">
+
+  <div class="flex items-center justify-between mb-6">
+    <h1 class="text-3xl font-bold">Clinic Report</h1>
+    <a href="/home" data-link class="inline-flex items-center gap-2 px-4 py-2 text-sm
+         border border-gray-300 rounded-md
+         text-gray-700 bg-white
+         hover:bg-gray-50 hover:border-gray-400
+         transition">
+      ← Back to Home
+    </a>
+  </div>
+
+  <!-- Search + Sorting + Export -->
+  <div class="bg-white p-5 rounded shadow mb-6">
+    <div class="flex flex-col gap-4">
+
+      <!-- Controls row -->
+      <div class="flex flex-col lg:flex-row lg:items-center gap-3">
+
+        <!-- Search -->
+        <div class="w-full lg:w-80 relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-600 text-sm"></i>
+          <input id="searchInput" type="text" placeholder="Search by name / email / phone..." class="w-full h-10 border rounded pl-9 pr-3 text-sm
+                 focus:outline-none focus:ring-2 focus:ring-blue-200" />
+        </div>
+
+        <!-- Sort -->
+        <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+
+          <div class="relative w-full sm:w-48">
+            <i class="fa-solid fa-arrow-down-a-z absolute left-3 top-1/2 -translate-y-1/2 text-gray-600 text-sm"></i>
+            <select id="sortBy" class="w-full h-10 border rounded pl-9 pr-3 text-sm bg-white">
+              <option value="id">Sort: ID</option>
+              <option value="name">Sort: Name</option>
+              <option value="year">Sort: Year</option>
+            </select>
+          </div>
+
+          <div class="relative w-full sm:w-32">
+            <i class="fa-solid fa-up-down absolute left-3 top-1/2 -translate-y-1/2 text-gray-600 text-sm"></i>
+            <select id="sortDir" class="w-full h-10 border rounded pl-9 pr-3 text-sm bg-white">
+              <option value="asc">Asc ↑</option>
+              <option value="desc">Desc ↓</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Export (push right on large screens) -->
+        <div class="flex gap-2 w-full lg:w-auto lg:ml-auto">
+          <button id="exportCsvBtn" class="h-10 px-3 rounded border bg-white text-sm text-gray-800
+                 inline-flex items-center gap-2 justify-center whitespace-nowrap
+                 hover:bg-gray-50">
+            <i class="fa-solid fa-file-csv text-green-700 text-base"></i>
+            CSV
+          </button>
+
+          <button id="exportPdfBtn" class="h-10 px-3 rounded bg-brand-1 text-white text-sm
+                 inline-flex items-center gap-2 justify-center whitespace-nowrap
+                 hover:bg-brand-2">
+            <i class="fa-solid fa-file-pdf text-base"></i>
+            PDF
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- List -->
+  <div class="bg-white p-5 rounded shadow">
+    <div id="loadingSpinner" class="text-center py-4">
+      <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-500 mx-auto"></div>
+    </div>
+
+    <div id="profilesTableContainer" class="hidden overflow-x-auto">
+      <table class="min-w-full text-left border">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="px-3 py-2">ID</th>
+            <th class="px-3 py-2">Patient</th>
+            <th class="px-3 py-2">Email</th>
+            <th class="px-3 py-2">Phone</th>
+            <th class="px-3 py-2">Doctor</th>
+            <th class="px-3 py-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="profilesTableBody"></tbody>
+      </table>
+
+      <p id="noProfiles" class="text-center text-gray-500 mt-3 hidden">
+        No students found.
+      </p>
+    </div>
+  </div>
+
+  <div id="alertContainer" class="fixed top-4 right-4 space-y-2 z-50"></div>
+</div>

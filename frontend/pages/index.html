@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Management</title>
+
+    <link rel="icon" href="/frontend/assets/img/clinic-icon.svg" type="image/svg+xml">
+
+
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Beautiful, attention-grabbing font: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="/frontend/assets/css/style.css">
+
+    <!-- Apply Outfit globally -->
+    <style>
+        body {
+            font-family: "Outfit", sans-serif;
+            letter-spacing: 0.3px;
+        }
+    </style>
+</head>
+
+
+
+
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+    <!-- Environment variables -->
+    <script src="/frontend/env.js"></script>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- SPA Root Container -->
+    <!-- <main id="app" class="max-w-2xl mx-auto p-6 flex-grow"></main> -->
+    <main id="app" class="w-full flex-grow"></main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JS Modules -->
+    <script type="module">
+        import { loadComponent } from "/frontend/assets/js/utils/loadComponent.js";
+        import { initRouterEvents, router } from "/frontend/assets/js/router/viewRouter.js";
+
+        // Load header/footer templates
+        loadComponent("#header", "/frontend/assets/js/components/Header.html");
+        loadComponent("#footer", "/frontend/assets/js/components/Footer.html");
+
+        initRouterEvents();
+        router();
+    </script>
+
+</body>
+
+</html>
