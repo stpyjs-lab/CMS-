@@ -1,3 +1,4 @@
+// Feature: profile view component — renders patient/student profile details and tables. Connects: profileController and export utilities.
 // frontend/assets/js/components/ProfileView.js
 import { $ } from "../utils/dom.js";
 

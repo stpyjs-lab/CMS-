@@ -1,3 +1,4 @@
+# Feature: doctor service — CRUD logic forwarding to DB queries. Connects: database.queries, controllers.
 from database.queries import (
     doctors_get_all,
     doctors_get_one,

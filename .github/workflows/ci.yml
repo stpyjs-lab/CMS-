@@ -1,5 +1,5 @@
+ # Feature: CI workflow — runs lint/compile and unit/smoke tests on push. Connects: GitHub Actions and test suite.
 name: CI
-
 on:
   push:
     branches: ["main"]

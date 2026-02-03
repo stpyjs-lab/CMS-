@@ -1,3 +1,4 @@
+# Feature: URL router — maps HTTP paths to services/controllers and serves SPA/static assets. Connects: core, services, frontend.
 # router.py
 
 from datetime import datetime

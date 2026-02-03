@@ -1,3 +1,4 @@
+// Feature: profile export helpers — build CSV/PDF fragments for profiles. Connects: profileController and export UI.
 // frontend/assets/js/utils/profileExport.js
 // Only export helpers for the profile page (no DOM events)
 

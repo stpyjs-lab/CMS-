@@ -1,3 +1,4 @@
+# Feature: invoice integration tests — create patients/doctors and invoices. Connects: app.py and invoice API.
 import unittest
 import os
 import time

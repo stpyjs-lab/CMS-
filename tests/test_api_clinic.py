@@ -1,3 +1,4 @@
+# Feature: clinic API tests — smoke endpoints for patients/doctors/billing. Connects: app.py and router.
 import unittest
 import os
 import time

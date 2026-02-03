@@ -1,3 +1,4 @@
+// Feature: list utilities — searching, filtering, sorting helpers. Connects: controllers and components.
 // frontend/assets/js/utils/listTools.js
 
 // Turn an object into a searchable lowercase string using selected fields

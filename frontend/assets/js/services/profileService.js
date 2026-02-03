@@ -1,3 +1,4 @@
+// Feature: profile data client — fetch and shape profile-related data. Connects: profile views and backend APIs.
 // frontend/assets/js/services/profileService.js
 // Only data fetching / shaping (no DOM here)
 

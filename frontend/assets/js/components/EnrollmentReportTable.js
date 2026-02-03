@@ -1,3 +1,4 @@
+// Feature: enrollment report table component — renders enrollment/join reports. Connects: reportController and DOM utils.
 import { $ } from "../utils/dom.js";
 
 export function renderEnrollmentReportTable(rows) {

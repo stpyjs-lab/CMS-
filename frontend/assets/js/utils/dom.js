@@ -1,3 +1,4 @@
+// Feature: DOM utils — helper helpers for element selection and creation. Connects: components and controllers.
 // Shortcut for selecting elements by ID
 export const $ = (id) => document.getElementById(id);
 

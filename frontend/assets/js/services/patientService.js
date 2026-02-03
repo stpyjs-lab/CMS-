@@ -1,3 +1,4 @@
+// Feature: patient API client — fetch/send patient data to backend endpoints. Connects: /api/patients and controllers.
 const API_URL = "/api/patients";
 
 async function safeJson(res) {

@@ -1,3 +1,4 @@
+// Feature: alert component — shows temporary notifications to the user. Connects: controllers and UI.
 import { $ } from "../utils/dom.js";
 
 // Displays a temporary alert message (success by default, or error if specified)

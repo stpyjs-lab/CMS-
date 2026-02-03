@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+# Feature: test command examples — quick CURL commands to exercise the API. Connects: tests and local server.
 ##################### API Observation Via Codespace URL
 ##################### API Observation Via Hopscotch
 ##################### API Observation Via CURL

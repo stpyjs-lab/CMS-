@@ -1,3 +1,4 @@
+// Feature: billing table component — renders invoices and wires edit/delete actions. Connects: billingController and DOM utils.
 import { $ } from "../utils/dom.js";
 import { editInvoice, deleteInvoiceAction } from "../controllers/billingController.js";
 

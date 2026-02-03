@@ -1,3 +1,4 @@
+// Feature: frontend app bootstrap — initializes SPA router and UI. Connects: router and page assets.
 // Main entrypoint for frontend
 // import { initStudentController } from "./controllers/studentController.js";
 import { router } from "./router/viewRouter.js";

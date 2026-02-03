@@ -1,3 +1,4 @@
+# Feature: integration tests for patient CRUD flows — creates/updates/deletes patients via HTTP. Connects: app.py and patient API endpoints.
 import unittest
 import os
 import time

@@ -1,3 +1,4 @@
+// Feature: billing form component — populate selects and manage form state for invoices. Connects: billingController and services.
 import { $ } from "../utils/dom.js";
 import { apiGetAll as apiGetAllPatients } from "../services/patientService.js";
 import { apiGetAll as apiGetAllDoctors } from "../services/doctorService.js";

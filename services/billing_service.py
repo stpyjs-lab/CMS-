@@ -1,3 +1,4 @@
+# Feature: billing compatibility layer — reuses invoice logic for billing endpoints. Connects: invoice_service, controllers.
 # services/billing_service.py
 """
 Billing service layer that forwards to the existing invoice service.

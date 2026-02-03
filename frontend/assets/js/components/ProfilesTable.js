@@ -1,3 +1,4 @@
+// Feature: profiles table component — renders profiles list and wires actions. Connects: profilesController and services.
 // frontend/assets/js/components/ProfilesTable.js
 import { $ } from "../utils/dom.js";
 

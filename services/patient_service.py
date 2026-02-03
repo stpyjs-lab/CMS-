@@ -1,3 +1,4 @@
+# Feature: patient service — database CRUD for patients. Connects: database.queries, controllers.
 from database.queries import (
     patients_get_all,
     patients_get_one,

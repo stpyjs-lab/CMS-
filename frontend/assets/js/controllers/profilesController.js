@@ -1,4 +1,4 @@
-// frontend/assets/js/controllers/profilesController.js
+// Feature: profiles controller — builds clinic-wide profiles listing and exports. Connects: patientService, billingService, components.
 
 import { $ } from "../utils/dom.js";
 import { filterList, sortList } from "../utils/listTools.js";

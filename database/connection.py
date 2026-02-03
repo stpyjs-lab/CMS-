@@ -1,3 +1,4 @@
+# Feature: DB connection manager — open/init SQLite DB and ensure schema. Connects: database.queries and services.
 # database/connection.py
 import sqlite3
 

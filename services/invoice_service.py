@@ -1,3 +1,4 @@
+# Feature: invoice service — database CRUD for invoices. Connects: database.queries, controllers.
 from database.queries import (
     invoices_get_all,
     invoices_get_one,

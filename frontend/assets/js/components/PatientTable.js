@@ -1,3 +1,4 @@
+// Feature: patient table component — renders patients list and wires edit/delete actions. Connects: patientController and DOM utils.
 import { $ } from "../utils/dom.js";
 import { editPatient, deletePatientAction } from "../controllers/patientController.js";
 

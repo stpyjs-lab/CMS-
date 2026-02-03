@@ -1,3 +1,4 @@
+# Feature: middleware — add/modify request headers (CORS). Connects: responses and handlers.
 # Adds headers used by browsers (CORS) so frontend JS can call the backend
 
 def add_cors_headers(handler):

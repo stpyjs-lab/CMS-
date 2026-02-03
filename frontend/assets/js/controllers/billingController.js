@@ -1,3 +1,4 @@
+// Feature: billing controller — UI logic for invoices/billing, populates selects and tables. Connects: billingService, patientService, doctorService, components.
 import { apiGetAll, apiGetOne, apiCreate, apiUpdate, apiDelete } from "../services/billingService.js";
 import { apiGetAll as apiGetAllPatients } from "../services/patientService.js";
 import { apiGetAll as apiGetAllDoctors } from "../services/doctorService.js";

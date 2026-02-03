@@ -1,3 +1,4 @@
+# Feature: database queries — SQL CRUD implementations for patients/doctors/invoices/appointments. Connects: connection, services.
 # database/queries.py
 # Actual SQL queries — Create, Read, Update, Delete (CRUD)
 

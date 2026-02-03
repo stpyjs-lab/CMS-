@@ -1,3 +1,4 @@
+// Feature: export utilities — CSV/PDF/profile export helpers. Connects: controllers and UI export buttons.
 // frontend/assets/js/utils/exportTools.js
 
 function downloadBlob(filename, blob) {

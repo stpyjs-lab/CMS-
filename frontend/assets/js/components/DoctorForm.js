@@ -1,3 +1,4 @@
+// Feature: doctor form component — handles form reset/fill for doctor data. Connects: doctorController and DOM utils.
 import { $, createElement } from "../utils/dom.js";
 
 export function resetForm() {

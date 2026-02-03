@@ -1,3 +1,4 @@
+// Feature: patient controller — UI logic for patient CRUD and form handling. Connects: patientService and components.
 import { apiGetAll, apiGetOne, apiCreate, apiUpdate, apiDelete } from "../services/patientService.js";
 import { showAlert } from "../components/Alert.js";
 import { renderPatientTable } from "../components/PatientTable.js";

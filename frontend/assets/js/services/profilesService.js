@@ -1,3 +1,4 @@
+// Feature: profiles data client — fetch all profiles for listings. Connects: profiles page and backend API.
 // frontend/assets/js/services/profilesService.js
 // Only responsible for fetching data (no DOM / UI here)
 

@@ -1,3 +1,4 @@
+# Feature: basic smoke tests — ensure APIs respond. Connects: app.py and core endpoints.
 # tests/test_api_smoke.py
 
 """

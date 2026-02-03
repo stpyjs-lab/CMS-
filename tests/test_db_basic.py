@@ -1,3 +1,4 @@
+# Feature: basic DB tests — check DB existence and tables. Connects: database/connection and queries.
 # tests/test_db_basic.py
 
 """

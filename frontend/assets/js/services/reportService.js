@@ -1,3 +1,4 @@
+// Feature: report API client — fetches enrollment reports from backend. Connects: /api/reports/enrollments and UI.
 const API_URL = window.ENV.API_BASE_URL; // usually /api/students (for studentService)
 const REPORT_URL = "/api/reports/enrollments";
 

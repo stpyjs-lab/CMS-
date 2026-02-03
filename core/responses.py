@@ -1,3 +1,4 @@
+# Feature: response helpers — send JSON/HTML with CORS headers. Connects: middleware and router.
 # Sends HTTP responses back to the client (JSON or HTML)
 
 import json

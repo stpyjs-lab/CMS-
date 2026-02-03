@@ -1,3 +1,4 @@
+// Feature: billing API client — fetch/send billing/invoice data to backend. Connects: /api/billing and billing UI.
 const API_URL = "/api/billing";
 
 async function safeJson(res) {

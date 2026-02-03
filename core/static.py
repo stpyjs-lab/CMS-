@@ -1,3 +1,4 @@
+# Feature: static file server — serves frontend assets and SPA shell. Connects: frontend files and router.
 # core/static.py
 import os
 import mimetypes

@@ -1,3 +1,4 @@
+// Feature: profile controller — manages profile view, loads patient/invoice data and wires export actions. Connects: ProfileView, services, and export utils.
 // frontend/assets/js/controllers/profileController.js
 
 import { $ } from "../utils/dom.js";

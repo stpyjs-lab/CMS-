@@ -1,3 +1,4 @@
+// Feature: doctor API client — fetch/send doctor data to backend endpoints. Connects: /api/doctors and controllers.
 const API_URL = "/api/doctors";
 
 async function safeJson(res) {

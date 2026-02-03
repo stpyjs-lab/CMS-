@@ -1,3 +1,4 @@
+<!-- Feature: export notes — explains CSV vs PDF export logic. Connects: exportTools and profileController -->
 Great question — and this is actually an important teaching moment for your students 👍
 You did nothing wrong by asking this.
 

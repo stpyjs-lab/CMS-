@@ -1,3 +1,4 @@
+// Feature: printable table builder — creates HTML suitable for printing/export to PDF. Connects: export utilities and controllers.
 // frontend/assets/js/utils/printTable.js
 // Only builds printable HTML (no export / no DOM events)
 

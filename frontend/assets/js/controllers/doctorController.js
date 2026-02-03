@@ -1,3 +1,4 @@
+// Feature: doctor controller — UI logic for doctor CRUD and form handling. Connects: doctorService and components.
 import { apiGetAll, apiGetOne, apiCreate, apiUpdate, apiDelete } from "../services/doctorService.js";
 import { showAlert } from "../components/Alert.js";
 import { renderDoctorTable } from "../components/DoctorTable.js";

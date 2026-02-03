@@ -1,3 +1,4 @@
+// Feature: report controller — loads enrollment/billing reports and renders table. Connects: reportService and components.
 import { apiGetEnrollmentReport } from "../services/reportService.js";
 import { renderEnrollmentReportTable } from "../components/EnrollmentReportTable.js";
 import { $ } from "../utils/dom.js";

@@ -1,3 +1,4 @@
+# Feature: app entry — initializes DB and starts HTTP server. Connects: router, database.
 # app.py
 import os
 from http.server import ThreadingHTTPServer

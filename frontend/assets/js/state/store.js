@@ -1,3 +1,4 @@
+// Feature: global state store — simple in-memory state for frontend. Connects: controllers and components.
 // frontend/assets/js/state/store.js
 
 // Global app state

@@ -1,3 +1,4 @@
+// Feature: doctor table component — renders doctors list and wires edit/delete actions. Connects: doctorController and DOM utils.
 import { $ } from "../utils/dom.js";
 import { editDoctor, deleteDoctorAction } from "../controllers/doctorController.js";
 export function renderDoctorTable(doctors) {

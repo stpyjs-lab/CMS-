@@ -1,3 +1,4 @@
+// Feature: client-side view router — loads page fragments and initializes controllers. Connects: controllers and frontend pages.
 // frontend/assets/js/router/viewRouter.js
 
 async function loadView(path) {
