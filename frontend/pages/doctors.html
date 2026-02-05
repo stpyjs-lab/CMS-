@@ -8,7 +8,7 @@
   <!-- Add / Edit Doctor Form -->
   <div class="bg-white p-5 rounded shadow mb-8">
     <h2 class="font-semibold mb-3 text-lg">Add New Doctor</h2>
-    <form id="doctorForm" class="space-y-3">
+    <form id="doctorForm" class="doctor-form">
       <input type="text" id="name" placeholder="Full name" required class="w-full border rounded px-3 py-2">
       <input type="text" id="specialty" placeholder="Specialty" class="w-full border rounded px-3 py-2">
       <input type="text" id="phone" placeholder="Phone" class="w-full border rounded px-3 py-2">
@@ -18,8 +18,7 @@
         <option value="WED-SAT">WED-SAT</option>
         <option value="MON-SAT">MON-SAT</option>
       </select>
-
-      <div class="flex space-x-2">
+      <div class="form-actions full-span flex space-x-2">
         <button type="submit" id="submitBtn" class="flex-1 bg-brand-1 hover:bg-brand-2 text-white py-2 rounded">Add Doctor</button>
         <button type="button" id="cancelBtn" class="flex-1 bg-gray-400 hover:bg-gray-500 text-white py-2 rounded hidden">Cancel</button>
       </div>
